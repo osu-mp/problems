@@ -4,11 +4,21 @@ class Solution:
     def removeElement(self, nums: list[int], val: int) -> int:
         k = 0
         for i in range(len(nums)):
-            if nums[i] != val:
+            if nums[i] != val:          # this avoids swapping the same value with itself, increased efficiency from 5% to 96%
                 nums[k] = nums[i]
                 k += 1
 
         return k
+    """
+    Runtime
+    Details
+    30ms
+    Beats 96.98%of users with Python3
+    Memory
+    Details
+    17.16MB
+    Beats 18.02%of users with Python3
+    """
             
     
 class TestSolution(unittest.TestCase):
