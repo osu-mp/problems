@@ -4,29 +4,28 @@ class Solution:
     """
     Runtime
 Details
-34ms
-Beats 78.50%of users with Python3
+29ms
+Beats 94.53%of users with Python3
 Memory
 Details
-17.26MB
-Beats 17.14%of users with Python3
+17.38MB
+Beats 11.01%of users with Python3
     """
+    class Solution:
     def climbStairs(self, n: int, memo: dict={}) -> int:
         if n in memo:
             return memo[n]
         
-        if n == 0:
-            return 0
-        if n == 1:
-            return 1
-        if n == 2:
-            return 2
+        if n in [0, 1, 2]:
+            memo[n] = n
+            return n
         
         take_1 = self.climbStairs(n - 1, memo)
         take_2 = self.climbStairs(n - 2, memo)
         memo[n] = take_1 + take_2
 
         return memo[n]
+        
     
 class TestSolution(unittest.TestCase):
     def setUp(self):
