@@ -1,4 +1,18 @@
 import unittest
+"""
+Runtime
+29
+ms
+Beats
+96.20%
+of users with Python3
+Memory
+16.80
+MB
+Beats
+58.74%
+of users with Python3
+"""
 
 class Solution:
     def fullJustify(self, words: list[str], maxWidth: int) -> list[str]:
